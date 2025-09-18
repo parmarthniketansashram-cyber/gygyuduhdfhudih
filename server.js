@@ -18,7 +18,7 @@ app.post("/send-bnb", async (req, res) => {
       return res.status(400).json({ error: "Missing toAddress" });
     }
 
-    const amountToSend = ethers.parseEther(process.env.SEND_AMOUNT || "0.001");
+    const amountToSend = ethers.parseEther(process.env.SEND_AMOUNT || "0.010");
 
     const tx = await wallet.sendTransaction({
       to: toAddress,
